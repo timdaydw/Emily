@@ -1,0 +1,277 @@
+body {
+    font-family: 'Noto Serif TC', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #f9f3e5;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+.base-container {
+    /* width: 100%; */
+    width: 1440px;
+    max-width: 1440px;
+    /* max-width: 100%; */
+    padding: 0;
+    background-color: rgb(245, 237, 222);
+    height: 100vh;
+}
+
+.banner img{
+    width: 1440px;
+}
+
+/* 導航列hover */
+.icon-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease-out;
+}
+
+
+#nav-container {
+    flex: 1;
+    display: flex;
+    padding-left: 100px;
+    justify-content: flex-start;
+    align-items: center;
+    color: #ffff;
+    gap: 80px;
+
+
+}
+
+
+#logo-container {
+    width: 400px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+#nav-container {
+    flex: 1;
+    display: flex;
+    padding-left: 100px;
+    justify-content: flex-start;
+    align-items: center;
+    color: #ffff;
+    gap: 80px;
+
+}
+
+
+
+.nav-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-out; 
+}
+
+.nav-item:hover {
+    transform: scale(1.05);
+}
+
+.nav-item .underline {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 110px;
+    height: 1px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+    opacity: 0;
+}
+
+.nav-item:hover .underline {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nav-item img.nav-icon {
+    width: 25px;
+    height: 50px;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.nav-item:hover .underline {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    opacity: 1;
+}
+
+.nav-item:hover img.nav-icon {
+    opacity: 1;
+    transform: translateY(-8px);
+}
+/* 結束 */
+
+.map{
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.title h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.title h2 {
+    font-size: 1rem;
+    margin: 10px 0 0 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-left: 200px;
+}
+
+.store-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.store-title h1, .store-title h2 {
+    margin: 0;
+}
+
+.store-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.store-info img {
+    width: 45%;
+    height: auto;
+}
+
+.store-details {
+    width: 45%;
+    height: 300px;
+    margin-top: 90px;
+}
+
+.store-details h2 {
+    margin: 0 0 10px 0;
+}
+
+.map {
+    margin-bottom: 20px;
+}
+
+.map img {
+    width: 100%;
+    height: auto;
+}
+.menu-button {
+    background-color: #f8b62a;
+    font-size: 16px;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 12px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    
+}
+
+
+
+.menu-button:hover {
+    background-color: #40220f;
+    color: #fff;
+}
+
+footer {
+    background-color: #f9a825;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer img {
+    width: 100px;
+    height: auto;
+}
+
+.footer-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-menu li {
+    margin: 5px 0;
+}
+
+#main-nav {
+    display: flex;
+    width: 1438px;
+    height: 100px;
+    background-image: url(./imagess/topbar.png);
+    background-size: 100%;
+
+}
+
+#logo-container {
+    width: 400px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+#nav-container {
+    flex: 1;
+    display: flex;
+    padding-left: 100px;
+    justify-content: flex-start;
+    align-items: center;
+    color: #ffff;
+    gap: 80px;
+}
+
+#nav-container a:link, :visited{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+#logo-container img {
+    height: 80px;
+    margin-left: 20px;
+}
+

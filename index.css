@@ -1,0 +1,661 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #d2d2d2;
+    font-family: 'Noto Serif TC', serif;
+
+}
+
+
+.base-container {
+    /* width: 100%; */
+    width: 1440px;
+    max-width: 1440px;
+    /* max-width: 100%; */
+    padding: 0;
+    background-color: rgb(245, 237, 222);
+    height: 100vh;
+}
+
+/* 先只分成電腦版、行動版兩種尺寸
+@media (max-width: 1440px) {
+    .base-container {
+        width: 480px;
+        max-width: 480px;
+        background-color: rgb(245, 237, 222);
+    }
+} */
+
+
+
+/* 導航列hover */
+#main-nav {
+    display: flex;
+    width: 1438px;
+    height: 100px;
+    padding: 1px;
+    background-image: url(./imagess/topbar.png);
+
+}
+
+#logo-container {
+    width: 400px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+#nav-container {
+    flex: 1;
+    display: flex;
+    padding-left: 100px;
+    justify-content: flex-start;
+    align-items: center;
+    color: #ffff;
+    gap: 80px;
+
+
+}
+
+#nav-container a:link, :visited{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.nav-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-out; 
+}
+
+.nav-item:hover {
+    transform: scale(1.05);
+}
+
+.nav-item .underline {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 110px;
+    height: 1px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+    opacity: 0;
+}
+
+.nav-item:hover .underline {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nav-item img.nav-icon {
+    width: 25px;
+    height: 50px;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.nav-item:hover .underline {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    opacity: 1;
+}
+
+.nav-item:hover img.nav-icon {
+    opacity: 1;
+    transform: translateY(-8px);
+}
+/* 結束 */
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease-out;
+}
+
+
+#logo-container img {
+    height: 80px;
+    margin-left: 20px;
+}
+
+#banner{
+    background-image: url(./imagess/Frame\ 108.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
+}
+
+
+#marquee-container {
+    height: 20px;
+    overflow: hidden;
+    background-color: #40220F;
+    padding: 20px;
+    border-top: 4px solid #f7efe0;
+    border-bottom: 4px solid #fefaf2;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    /* 使用 flex 布局 */
+    align-items: center;
+    /* 垂直居中 */
+}
+
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite;
+    color: #ffff;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    /* 从右侧移出屏幕 */
+    100% {
+        transform: translateX(-100%);
+    }
+
+    /* 移动到左侧屏幕外 */
+}
+
+
+#contact-us-container {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-us {
+    display: flex;
+    align-items: center;
+    height: 600px;
+    gap: 20px;
+}
+
+#about {
+    margin-left: 300px;
+
+}
+
+#about-us-left {
+    flex-direction: column;
+    max-width: 500px;
+    line-height: 1.6;
+    margin-top: 80px;
+
+}
+
+.about-us-right img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+ 
+
+}
+
+/* .about-header {
+    margin-bottom: 0px;
+}
+
+.about-subtitle {
+    margin-bottom: 50px;
+}
+
+.about-pragraph {
+    margin-bottom: 50px;
+} */
+
+
+
+#button-container button {
+    background-color: #F8B62A;
+    font-size: 16px;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 12px;
+    letter-spacing: 2px;
+    color: #ffff;
+    margin-top: 50px;
+}
+
+.best-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 0.2; 
+}
+
+#best-prod-container {
+    width: 1440px;
+    overflow: hidden;
+}
+
+.best-text {
+    text-align: center;
+    margin-top: 70px; /* 向下移动的距离 */
+    line-height: 1;
+}
+
+
+    #best-prod-container img {
+        display: block;
+        margin-top: 5px; /* 向下移動的距離 */
+    }
+
+
+
+#best-scroll-controller {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 500;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.scrollBtnContainer {
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nothing {
+    flex: 1;
+}
+
+.btnScroll {
+    background-color: #eca923;
+    color: #f0e5d9;
+    border-radius:  100px;
+    font-weight: 800;
+    font-size: 2rem;
+    padding: 20px 20px;
+    box-shadow: 2px 2px 5px rgba(117, 112, 112, 0.7);
+    cursor: pointer;
+}
+.best-title img{
+    margin-top: 0px;
+}
+/*最新消息 熱賣商品背景圖 */
+
+
+#best-seller {
+    background-repeat: no-repeat;
+    background-size: auto;
+    justify-content: center;
+    width: 1440px;
+    height: 905px;
+    display: flex;
+    position: relative;
+    
+}
+
+#button-container button:hover {
+    background-color: #40220F;
+    /* Green */
+    color: white;
+    cursor: pointer;
+}
+
+
+#good-tea {
+    display: flex;
+    justify-content:center ;
+    gap: 20px;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+.tea, .people, .nature {
+    width: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.4s ease-in-out;
+}
+
+.tea img, .people img, .nature img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.tea:hover, .people:hover, .nature:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+/*
+.tea::before {
+    content: "好茶";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 42px;
+    text-align: center;
+}
+
+.tea::before {
+    content: "來自於世界各地最優秀的茶園，由經驗豐富的茶葉專家精心挑選。他們憑藉對茶葉的深刻了解和敏銳的嗅覺，只選擇生長在優質土壤中的茶葉，確保每一片茶葉都具有最佳的品質。";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    font-size: 16px;
+}
+*/
+
+#tea-text-container {
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 336px;   /* 要重新算過 */
+    height: auto;  /* 要重新算過 */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 60px 40px 140px 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    
+}
+
+#tea-text-title {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    
+}
+
+
+#tea-text {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    text-align: center;
+    padding: 0px;
+    font-size: 20px;
+
+}
+
+.tea:hover #tea-text-container {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#news-list {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px; /*文章區塊左右間距*/
+    row-gap: 30px;  /*文章區塊上下間距*/
+    height: 470px;
+    overflow-y: hidden;
+ }
+ 
+
+#news {
+    width: 100%;
+    height: 540px;
+    display: flex;
+    margin-top: 30px;
+   
+}
+
+#news-left {
+    width: 250px;
+    /* margin-left: 100px; */
+    text-align: center;
+
+
+}
+
+.news-article-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+.news-article-container img:hover {
+    transform: scale(1.05);
+}
+
+#news-button button{
+    background-color: #F8B62A;
+    font-size: 16px;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 12px;
+    color: #ffff;
+}
+
+#news-button button:hover {
+    background-color: #40220F;
+    /* Green */
+    color: white;
+    cursor: pointer;
+}
+
+#news-right button{
+    background-color: #F8B62A;
+    font-size: 16px;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 12px;
+    color: #ffff;
+}
+
+#news-right button:hover {
+    background-color: #40220F;
+    /* Green */
+    color: white;
+    cursor: pointer;
+}
+
+
+
+#news-right {
+    margin-bottom: 100px;
+    margin-left: -60px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#news-right button {
+    margin: 10px 0;
+}
+#news-list {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px; /*文章區塊左右間距*/
+    row-gap: 30px;  /*文章區塊上下間距*/
+    height: 470px;
+    overflow-y: hidden;
+    padding: 20px;
+ }
+ 
+
+/* .news-article-container {
+    /* display: flex;
+    flex-direction: column;
+    /* 垂直排列子元素 */
+    /* align-items: center; */
+
+
+
+#news-right button {
+    background-color: #F8B62A;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: 1px solid #d7b756;
+
+}
+
+
+
+
+/* 
+#gallery img {
+    /* max-width: 100%;
+    height: 320px;
+    display: block;
+    margin-top: 240px; */
+ 
+
+#gallery {
+    /* display: flex; */
+    position: relative;
+    /* justify-content: space-around; */
+    background-image: url(./imagess/頁首/banner.png);
+    background-size: cover;
+    height: 650px;
+}
+
+
+
+#top {
+    position: absolute;
+    left: calc(50% - 300px);
+    top: 0;
+}
+
+
+#top img {
+    max-width: 100%;
+    height: 200px;
+
+}
+
+.ani_prod {
+    position: absolute;
+    /* left: 200px;
+    top: 300px; */
+}
+
+.store-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 0.2;
+}
+.title{
+    margin-top: 60px;
+    text-align: center;
+    
+}
+
+.store-title .title h2 {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 10px; 
+}
+.store-title .title h1 {
+    font-size: 36px;
+    line-height: 1.2; 
+    margin-top: 10px; 
+}
+
+#store {
+    background-image: url(./imagess/store/Frame\ 103.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1000px; 
+}
+.store-title img{
+margin-right: 00px;
+}
+
+
+.location img{
+    width: 450px;
+    height: 500px;
+}
+.store-details{
+    margin-top: 100px;
+    line-height:20px;
+    
+}
+.location {
+    display: flex;
+    margin-top: -30px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px; /* 控制图片和文字之间的间距 */
+    
+}
+.map{
+    margin-top: 70px;
+    border-radius: 20px;
+}
+
+#footer{
+    background-color: #e5a51c;
+    height: 150px;
+    padding: 40px 0; 
+    text-align: center; 
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    
+}
+.footer-menu{
+    list-style: none;
+    color: #ffff;
+}
+#footer-container{
+    background-image: url(./imagess/footer.logo.png);
+}
+
+
+.franchise-button {
+    
+    position: fixed;
+    top: calc(100vh - 180px);
+    left: calc(50% + 550px);
+    z-index: 2000;
+
+}
+
+.franchise-photo img {
+    width: 150px;
+}

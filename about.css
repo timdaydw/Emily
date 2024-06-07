@@ -1,0 +1,351 @@
+body {
+    font-family: 'Noto Serif TC', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f3e5;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.base-container {
+    width: 1440px;
+    max-width: 1440px;
+    padding: 0;
+    background-color: rgb(245, 237, 222);
+}
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../首頁/imagess/topbar.png);
+    background-color: none;
+    padding: 10px 0;
+    height: 100px;
+    text-align: center;
+
+}
+
+header img {
+    height: 0px;
+}
+
+nav {
+    text-align: center;
+    margin: 10px 0;
+    display: flex;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    justify-content: center;
+}
+
+
+#logo-container img {
+    height: 80px;
+    margin-left: 20px;
+}
+
+/* 導航列hover */
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease-out;
+}
+
+#main-nav {
+    display: flex;
+    width: 1438px;
+    height: 100px;
+    padding: 1px;
+    background-image: url(./imagess/topbar.png);
+
+}
+
+#logo-container {
+    width: 400px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+#nav-container {
+    flex: 1;
+    display: flex;
+    padding-left: 100px;
+    justify-content: flex-start;
+    align-items: center;
+    color: #ffff;
+    gap: 80px;
+}
+
+#nav-container a:link, :visited{
+    color: white;
+    text-decoration: none;
+}
+
+
+.nav-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-out; 
+}
+
+.nav-item:hover {
+    transform: scale(1.05);
+}
+
+.nav-item .underline {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 110px;
+    height: 1px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+    opacity: 0;
+}
+
+
+
+
+
+
+.nav-item img.nav-icon {
+    width: 25px;
+    height: 50px;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.nav-item:hover .underline {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    opacity: 1;
+}
+
+.nav-item:hover img.nav-icon {
+    opacity: 1;
+    transform: translateY(-8px);
+}
+/* 結束 */
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.356);
+    color: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    width: 500px;
+    font-size: 20px;
+    letter-spacing: 7px;
+    opacity: 0; 
+    transition: opacity 2s ease-in-out;  
+}
+
+body.loaded .overlay {
+    opacity: 1; 
+}
+
+.overlay h4 {
+    margin-top: -30px; /* 调整h4的位置 */
+    transition: margin-top 2s ease-in; /* 添加过渡效果 */
+}
+
+body.loaded .overlay h4 {
+    margin-top: 0; /* 页面加载完成后恢复正常位置 */
+}
+
+#banner {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+
+
+#banner video {
+    width: 100%;
+    height: auto;
+}
+
+
+#hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+.title {
+    text-align: center;
+    margin: 50px;
+}
+
+
+
+.title h2 {
+    margin: 0;
+    margin-top: 10px;
+    font-size: 48px; /* 设置h2的字体大小 */
+    font-weight: bold; /* 设置h2的字体粗细 */
+    color: #78440d; /* 设置h2的字体颜色 */
+}
+
+.title h3 {
+    font-size: 24px; /* 设置h2的字体大小 */
+    font-weight: bold; /* 设置h2的字体粗细 */
+    color: #99734b; /* 设置h2的字体颜色 */
+}
+
+
+
+.section-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 40px 0;
+    gap: 40px;
+    text-align: left;
+}
+
+.section-1 .text {
+    max-width: 45%;
+}
+
+
+
+.section-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 40px 0;
+    gap: 40px;
+    text-align: left;
+
+}
+
+.section-2 .text {
+    max-width: 45%;
+    line-height: 1.6;
+}
+
+
+.section-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 40px 0;
+    gap: 40px;
+    text-align: left;
+    
+}
+
+.section-3 .text {
+    max-width: 30%;
+    line-height: 1.6;
+}
+
+
+.section-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 40px 0;
+    gap: 40px;
+    text-align: left;
+
+}
+
+.section-4 .text {
+    max-width: 45%;
+    line-height: 1.6;
+}
+
+
+
+.section-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 40px 0;
+    gap: 40px;
+    text-align: left;
+
+}
+
+.section-5 .text {
+    max-width: 45%;
+    line-height: 1.6;
+}
+
+
+.photo img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo img:hover {
+    transform: scale(1.2);
+}
+
+
+
+#main-photo img{
+    width: auto;
+    justify-content: center;
+}
+
+
+
+
+
+
+#footer{
+    background-color: #F8B62A;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    background-color: #f9a825; 
+    height: 200px;            
+    color: white;             
+    text-align: center; 
+    margin-top: -5px;
+    
+}
+.footer-menu{
+    list-style: none;
+}

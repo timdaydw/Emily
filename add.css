@@ -1,0 +1,361 @@
+body {
+    font-family: 'Noto Serif TC', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f3e5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#logo-container img {
+    height: 60px;
+}
+
+
+#main-nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+#main-nav  button {
+    background-color: #4e3705;
+    color: rgb(237, 237, 237);
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 加入陰影效果 */
+    padding: 20px 40px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#main-nav button:hover {
+    background-color: #f8bf02;
+}
+
+.hero-image{
+    width: 400px;
+    margin-right: 200px;
+}
+
+#hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+
+.circle-border {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.circle {
+    padding: 5px;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border: 3px solid #78440d;
+    border-radius: 50%;
+    font-size: 36px;
+    color: #78440d;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: wave 2s infinite;
+}
+
+
+.circle:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.circle:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.circle:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.circle:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+#banner {
+    position: relative;
+    width: 100%;
+    height: 700px; /* 你可以根据需要调整高度 */
+    overflow: hidden;
+}
+
+
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    width: 100%;
+}
+
+.service-list li {
+    background: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.service-list li::before {
+    content: counter(service-counter);
+    counter-increment: service-counter;
+    background: #f8b62a;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+.animate-image {
+    opacity: 0;
+    transform: rotate(-20deg);
+    animation: rotateIn 1.5s forwards;
+}
+
+@keyframes rotateIn {
+    to {
+        opacity: 1;
+        transform: rotate(0);
+    }
+}
+
+
+
+
+
+
+
+.service-list {
+    counter-reset: service-counter;
+}
+
+
+
+#hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #dca75c;
+    color: #fff;
+    
+}
+
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#join-info {
+    padding: 60px 20px;
+    background-color: #f2ede5d7;
+    text-align: center;
+}
+
+#join-info h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.info-item {
+    margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    
+}
+
+.info-item h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.info-item p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#contact {
+    padding: 60px 20px;
+    background-color: #d6ccbe;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f8b62a;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.contact-button:hover {
+    background-color: #e0a620;
+}
+
+footer {
+    padding: 20px;
+    background-color: #edb232;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.footer-menu li {
+    margin: 5px 0;
+}
+
+.scroll-to-top {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f8b62a;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.scroll-to-top:hover {
+    background-color: #e0a620;
+}
+
+.franchise-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #F8B62A;
+    padding: 15px 30px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.franchise-button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.franchise-photo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.franchise-button:hover {
+    background-color: #DDAE4B;
+}
+
+.email-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.email-input-container label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.email-input-container input[type="email"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.email-input-container input[type="email"]::placeholder {
+    color: #ccc;
+}
+
+.email-input-container input[type="email"]:focus {
+    outline: none;
+    border-color: #f8b62a;
+}
